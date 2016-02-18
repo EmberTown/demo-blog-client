@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'demo-blog-client',
     environment: environment,
     baseURL: '/',
+    apiHost: '',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -29,6 +30,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.apiHost = 'http://localhost:3000';
   }
 
   if (environment === 'test') {
@@ -44,7 +46,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.apiHost = 'https://demo-blog-api.herokuapp.com';
   }
 
   return ENV;
