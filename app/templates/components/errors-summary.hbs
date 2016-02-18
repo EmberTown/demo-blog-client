@@ -1,0 +1,16 @@
+{{#if messages}}
+  <div class="message is-danger">
+    <div class="message-header">
+      Feilmeldinger
+    </div>
+    <div class="message-body">
+      <div class="content">
+        <ul>
+        {{#each messages as |message|}}
+          <li>{{message}}</li>
+        {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+{{/if}}

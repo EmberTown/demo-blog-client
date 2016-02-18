@@ -1,0 +1,14 @@
+<div class="columns">
+  <div class="column is-3">
+    <nav class="menu">
+    {{#each model as |post|}}
+      {{#link-to 'posts.post' post.id class="menu-block"}}
+        {{post.title}}
+      {{/link-to}}
+    {{/each}}
+    </nav>
+  </div>
+  <div class="column">
+    {{outlet}}
+  </div>
+</div>

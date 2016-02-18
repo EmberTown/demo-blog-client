@@ -1,0 +1,24 @@
+{{errors-summary messages=model.errors.messages}}
+<div class="control">
+  {{input value=model.title placeholder="Tittel" class="input is-large"}}
+</div>
+<div class="control">
+  {{textarea value=model.body placeholder="Innhold" class="textarea" autoresize=true}}
+</div>
+<div>
+  <button {{action 'cancelEditing' model}} class="button is-outlined">Avbryt</button>
+  <button {{action 'savePost' model}} class="button is-primary">Lagre</button>
+</div>
+<section class="section">
+  <div class="message">
+    <div class="message-header">
+      Forhåndsvisning
+    </div>
+    <div class="message-body">
+      <h1 class="title">{{model.title}}</h1>
+      <div class="content">
+        {{markdown-to-html markdown=model.body}}
+      </div>
+    </div>
+  </div>
+</section>

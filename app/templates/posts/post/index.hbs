@@ -1,0 +1,21 @@
+<h1 class="title is-2">{{model.title}}</h1>
+<div class="navbar">
+  <div class="navbar-left">
+    <div class="navbar-item">
+      <span class="heading">Skrevet av</span>
+      <span class="subtitle">{{model.author.name}}</span>
+    </div>
+    <div class="navbar-item">
+      <span class="heading">Publisert</span>
+      <span class="subtitle">{{moment-from-now model.createdAt}}</span>
+    </div>
+  </div>
+  <div class="navbar-right">
+    <div class="navbar-item">
+      {{#link-to 'posts.post.edit' model class="button"}}Redigér{{/link-to}}
+    </div>
+  </div>
+</div>
+<div class="content">
+{{markdown-to-html markdown=model.body}}
+</div>
