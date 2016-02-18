@@ -3,6 +3,9 @@
     <nav class="menu">
     {{#each model as |post|}}
       {{#link-to 'posts.post' post.id class="menu-block"}}
+        <span class="menu-icon">
+          {{fa-icon 'file-text-o'}}
+        </span>
         {{post.title}}
       {{/link-to}}
     {{/each}}
